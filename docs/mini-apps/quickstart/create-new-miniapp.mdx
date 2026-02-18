@@ -8,11 +8,17 @@ description: Quickly create a mini app, sign a manifest, and publish to the Base
 * Base app account
 * [Vercel](https://vercel.com/) account for hosting the application
 
+<Panel>
+<iframe 
+ className="w-3/4 aspect-video rounded-xl mx-auto block"
+ src="https://www.youtube-nocookie.com/embed/vLnugincHAg?si=I_jyZxSzVe32nuC5" 
+ title="Create a new mini app in under 10 mins" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</Panel>
 
 <Steps>
 <Step title="Deploy Template">
 Click the button below and follow the prompts to deploy the quickstart template to Vercel.
-<Card title="Deploy to Vercel" icon="rocket" href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbase%2Fdemos%2Ftree%2Fmaster%2Fminikit%2Fnew-mini-app-quickstart&project-name=new-mini-app-quickstart&repository-name=new-mini-app-quickstart&env=NEXT_PUBLIC_PROJECT_NAME&demo-title=New%20Mini%20App&demo-description=Quickstart%20waitlist%20mini%20app%20with%20MiniKit%20on%20Base" horizontal>
+<Card title="Deploy to Vercel" icon="rocket" href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbase%2Fdemos%2Ftree%2Fmaster%2Fmini-apps%2Ftemplates%2Fminikit%2Fnew-mini-app-quickstart&project-name=new-mini-app-quickstart&repository-name=new-mini-app-quickstart&env=NEXT_PUBLIC_PROJECT_NAME&demo-title=New%20Mini%20App&demo-description=Quickstart%20waitlist%20mini%20app%20with%20MiniKit%20on%20Base" horizontal>
   Rapidly deploy the quickstart template to Vercel to get started.
 </Card>
 </Step>
@@ -112,7 +118,7 @@ Push all changes to the `main` branch. Vercel will automatically deploy the chan
   2. Use the "Account association" tab to verify the association credentials were created correctly.
   3. Use the "Metadata" tab to see the metadata added from the manifest and identify any missing fields.
 
-<video
+ <video
   autoPlay
   muted
   loop
@@ -126,11 +132,18 @@ Push all changes to the `main` branch. Vercel will automatically deploy the chan
     To publish your app, create a post in the Base app with your app's URL.
 
 
-    <img 
+<img 
   src="/images/minikit/publish-app-base.png" 
   alt="Posting an app to Base app"
   height="300"
   className="rounded-lg"
-    />
+/>
 </Step>
 </Steps>
+
+## Next Steps
+Explore the templates and resources available to help you build your mini app. 
+
+<CardGroup cols={2}>
+  <Card title="Templates" icon="users" href="/mini-apps/resources/templates" />
+</CardGroup>

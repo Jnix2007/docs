@@ -28,7 +28,7 @@ your-domain.com/
 Use Base Build's built-in Preview Tool for foundational debugging.
 
 <Card title="Preview Tool" img="/images/base-build/preview-tool-overview.png">
-Start debugging your app using the [Preivew tool](https://base.dev/preview)
+Start debugging your app using the [Preview tool](https://base.dev/preview)
 </Card>
 
 The **Preview tool** will help you:  
@@ -188,6 +188,17 @@ export default function App() {
 - [ ] Images load and display correctly
 - [ ] Console shows no critical errors
 
+### 7. Your app is being flagged as unsafe?
+
+Base Account relies on the [Blockaid](https://blockaid.io/) platform to flag apps as unsafe.
+If your app is being flagged as unsafe or if you are concerned about your app being flagged as unsafe, you can follow the steps below to resolve the issue:
+
+1. Navigate to [Blockaid Reporting Portal](https://report.blockaid.io/).
+2. Submit a "mistake" or "developer" report.
+3. Follow the instructions provided by Blockaid to resolve the issue.
+4. If you are unable to resolve the issue, you can contact the Base core team on [Discord](https://discord.com/invite/buildonbase) for support.
+
+
 ## Advanced Troubleshooting
 
 **CBW Validator Tool:**
@@ -202,9 +213,6 @@ Use the Coinbase Wallet validator for Base App compatibility analysis. This AI-p
     "header": "your-farcaster-header",
     "payload": "your-farcaster-payload", 
     "signature": "your-farcaster-signature"
-  },
-    "baseBuilder": {
-    "allowedAddresses": ["0x..."]
   },
   "frame": {
     "name": "Your Mini App",

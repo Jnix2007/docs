@@ -1,9 +1,9 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "aspen",
   "name": "Base Documentation",
   "colors": {
-    "primary": "#578BFA",
+    "primary": "#0000ff",
     "light": "#578BFA",
     "dark": "#578BFA"
   },
@@ -29,15 +29,10 @@
             "pages": ["get-started/base"]
           },
           {
-            "group": "Browse by",
-            "pages": ["get-started/products", "get-started/use-cases"]
-          },
-          {
             "group": "Quickstart",
             "pages": [
               "get-started/build-app",
               "get-started/launch-token",
-              "get-started/deploy-chain",
               "get-started/deploy-smart-contracts"
             ]
           },
@@ -52,7 +47,7 @@
           },
           {
             "group": "Build with AI",
-            "pages": ["get-started/ai-prompting", "get-started/prompt-library"]
+            "pages": ["get-started/docs-mcp", "get-started/docs-llms", "get-started/prompt-library"]
           }
         ],
         "global": {
@@ -71,6 +66,11 @@
               "anchor": "Bridge",
               "href": "https://docs.base.org/base-chain/network-information/bridges-mainnet",
               "icon": "coin"
+            },
+            {
+              "anchor": "Blog",
+              "href": "https://blog.base.dev/",
+              "icon": "scroll"
             }
           ]
         }
@@ -84,17 +84,21 @@
               "base-chain/quickstart/why-base",
               "base-chain/quickstart/deploy-on-base",
               "base-chain/quickstart/connecting-to-base",
-              "base-chain/quickstart/bridge-token"
+              "base-chain/quickstart/bridge-token",
+              "base-chain/quickstart/base-solana-bridge"
             ]
           },
           {
             "group": "Network Information",
             "pages": [
               "base-chain/network-information/base-contracts",
-              "base-chain/network-information/network-fees",
               "base-chain/network-information/ecosystem-contracts",
+              "base-chain/network-information/network-fees",
               "base-chain/network-information/block-building",
-              "base-chain/network-information/diffs-ethereum-base"
+              "base-chain/network-information/transaction-finality",
+              "base-chain/network-information/diffs-ethereum-base",
+              "base-chain/network-information/troubleshooting-transactions",
+              "base-chain/network-information/configuration-changelog"
             ]
           },
           {
@@ -112,6 +116,15 @@
               "base-chain/node-operators/performance-tuning",
               "base-chain/node-operators/snapshots",
               "base-chain/node-operators/troubleshooting"
+            ]
+          },
+          {
+            "group": "Builder Codes",
+            "pages": [
+              "base-chain/builder-codes/builder-codes",
+              "base-chain/builder-codes/app-developers",
+              "base-chain/builder-codes/wallet-developers",
+              "base-chain/builder-codes/bridge-developers"
             ]
           },
           {
@@ -166,6 +179,11 @@
               "anchor": "Support",
               "href": "https://discord.com/invite/buildonbase",
               "icon": "discord"
+            },
+            {
+              "anchor": "Blog",
+              "href": "https://blog.base.dev/",
+              "icon": "scroll"
             }
           ]
         }
@@ -207,8 +225,7 @@
                 "group": "Wagmi/Viem",
                 "pages": [
                   "base-account/framework-integrations/wagmi/setup",
-                  "base-account/framework-integrations/wagmi/sign-in-with-base",
-                  "base-account/framework-integrations/wagmi/base-pay",
+                  "base-account/framework-integrations/wagmi/batch-transactions",
                   "base-account/framework-integrations/wagmi/basenames",
                   "base-account/framework-integrations/wagmi/other-use-cases"
                 ]
@@ -217,11 +234,15 @@
                 "group": "Privy",
                 "pages": [
                   "base-account/framework-integrations/privy/setup",
+                  "base-account/framework-integrations/privy/authentication",
+                  "base-account/framework-integrations/privy/wallet-actions",
                   "base-account/framework-integrations/privy/sub-accounts"
                 ]
               },
               "base-account/framework-integrations/cdp",
-              "base-account/framework-integrations/nextjs-with-dynamic"
+              "base-account/framework-integrations/rainbowkit",
+              "base-account/framework-integrations/reown",
+              "base-account/framework-integrations/thirdweb"
             ]
           },
           {
@@ -231,6 +252,17 @@
                 "group": "Account SDK",
                 "pages": [
                   "base-account/reference/core/createBaseAccount",
+                  "base-account/reference/core/getProvider",
+                  "base-account/reference/spend-permission-utilities/requestSpendPermission",
+                  "base-account/reference/spend-permission-utilities/prepareSpendCallData",
+                  "base-account/reference/spend-permission-utilities/fetchPermissions",
+                  "base-account/reference/spend-permission-utilities/fetchPermission",
+                  "base-account/reference/spend-permission-utilities/getPermissionStatus",
+                  "base-account/reference/spend-permission-utilities/requestRevoke",
+                  "base-account/reference/spend-permission-utilities/prepareRevokeCallData",
+                  "base-account/reference/core/generateKeyPair",
+                  "base-account/reference/core/getKeypair",
+                  "base-account/reference/core/getCryptoKeyAccount",
                   {
                     "group": "Base Pay",
                     "pages": [
@@ -244,20 +276,21 @@
                       "base-account/reference/base-pay/subscriptions-overview",
                       "base-account/reference/base-pay/subscribe",
                       "base-account/reference/base-pay/getStatus",
-                      "base-account/reference/base-pay/prepareCharge"
+                      "base-account/reference/base-pay/charge",
+                      "base-account/reference/base-pay/revoke",
+                      "base-account/reference/base-pay/getOrCreateSubscriptionOwnerWallet",
+                      "base-account/reference/base-pay/prepareCharge",
+                      "base-account/reference/base-pay/prepareRevoke"
                     ]
                   },
-                  "base-account/reference/core/getProvider",
-                  "base-account/reference/spend-permission-utilities/requestSpendPermission",
-                  "base-account/reference/spend-permission-utilities/prepareSpendCallData",
-                  "base-account/reference/spend-permission-utilities/fetchPermissions",
-                  "base-account/reference/spend-permission-utilities/fetchPermission",
-                  "base-account/reference/spend-permission-utilities/getPermissionStatus",
-                  "base-account/reference/spend-permission-utilities/requestRevoke",
-                  "base-account/reference/spend-permission-utilities/prepareRevokeCallData",
-                  "base-account/reference/core/generateKeyPair",
-                  "base-account/reference/core/getKeypair",
-                  "base-account/reference/core/getCryptoKeyAccount"
+                  {
+                    "group": "Prolink Utilities",
+                    "pages": [
+                      "base-account/reference/prolink-utilities/encodeProlink",
+                      "base-account/reference/prolink-utilities/decodeProlink",
+                      "base-account/reference/prolink-utilities/createProlinkUrl"
+                    ]
+                  }
                 ]
               },
               {
@@ -318,7 +351,8 @@
                       "base-account/reference/core/capabilities/flowControl",
                       "base-account/reference/core/capabilities/paymasterService",
                       "base-account/reference/core/capabilities/auxiliaryFunds",
-                      "base-account/reference/core/capabilities/datacallback"
+                      "base-account/reference/core/capabilities/datacallback",
+                      "base-account/reference/core/capabilities/dataSuffix"
                     ]
                   }
                 ]
@@ -363,8 +397,8 @@
             "group": "Basenames",
             "pages": [
               "base-account/basenames/basenames-faq",
-              "base-account/basenames/basename-transfer",
-              "base-account/basenames/basenames-onchainkit-tutorial"            ]
+              "base-account/basenames/basename-transfer"
+            ]
           },
           {
             "group": "Contribute",
@@ -378,7 +412,7 @@
           "anchors": [
             {
               "anchor": "GitHub",
-              "href": "https://github.com/coinbase/onchainkit",
+              "href": "https://github.com/base/account-sdk",
               "icon": "github"
             },
             {
@@ -390,31 +424,6 @@
         }
       },
       {
-        "tab": "Base App",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": ["base-app/introduction/beta-faq"]
-          },
-          {
-            "group": "Chat Agents",
-            "pages": [
-              "base-app/agents/why-agents",
-              "base-app/agents/chat-agents",
-              "base-app/agents/building-quality-agents",
-              "base-app/agents/getting-started",
-              "base-app/agents/content-types",
-              "base-app/agents/transaction-trays",
-              "base-app/agents/deeplinks",
-              "base-app/agents/x402-agents",
-              "base-app/agents/mini-apps-and-agents",
-              "base-app/agents/best-practices",
-              "base-app/agents/getting-featured"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Mini Apps",
         "groups": [
           {
@@ -422,56 +431,49 @@
             "pages": [
               "mini-apps/quickstart/migrate-existing-apps",
               "mini-apps/quickstart/create-new-miniapp",
-              "mini-apps/quickstart/launch-checklist"
+              "mini-apps/quickstart/build-checklist",
+              "mini-apps/quickstart/building-for-the-base-app",
+              "mini-apps/quickstart/template"
             ]
           },
           {
-            "group": "Get Featured",
+            "group": "Core Concepts",
             "pages": [
-              "mini-apps/get-featured/requirements"
+              "mini-apps/core-concepts/manifest",
+              "mini-apps/core-concepts/context",
+              "mini-apps/core-concepts/embeds-and-previews",
+              "mini-apps/core-concepts/base-account",
+              "mini-apps/core-concepts/notifications",
+              "mini-apps/core-concepts/authentication",
+              "mini-apps/core-concepts/navigation"
             ]
           },
           {
-            "group": "Features",
+            "group": "Technical Guides",
             "pages": [
-              "mini-apps/features/overview",
-              "mini-apps/features/manifest",
-              "mini-apps/features/authentication",
-              "mini-apps/features/context",
-              "mini-apps/features/embeds-and-previews",
-              "mini-apps/features/search-and-discovery",
-              "mini-apps/features/sharing-and-social-graph",
-              "mini-apps/features/notifications",
-              "mini-apps/features/wallet",
-              "mini-apps/features/links"
+              "mini-apps/technical-guides/sign-manifest",
+              "mini-apps/technical-guides/dynamic-embeds",
+              "mini-apps/technical-guides/neynar-notifications",
+              "mini-apps/technical-guides/accept-payments",
+              "mini-apps/technical-guides/building-chat-agents"
             ]
           },
           {
-            "group": "Design Guidelines",
+            "group": "Featured Guidelines",
             "pages": [
-              {
-                "group": "Foundations",
-                "pages": [
-                  "mini-apps/design-ux/foundations/app-icon",
-                  "mini-apps/design-ux/foundations/colors",
-                  "mini-apps/design-ux/foundations/typography",
-                  "mini-apps/design-ux/foundations/spacing",
-                  "mini-apps/design-ux/foundations/navigation",
-                  "mini-apps/design-ux/foundations/mobile-first"
-                ]
-              },
-              "mini-apps/design-ux/onchain-ux",
-              "mini-apps/design-ux/components",
-              "mini-apps/design-ux/resources"
+              "mini-apps/featured-guidelines/overview",
+              "mini-apps/featured-guidelines/product-guidelines",
+              "mini-apps/featured-guidelines/design-guidelines",
+              "mini-apps/featured-guidelines/notification-guidelines",
+              "mini-apps/featured-guidelines/technical-guidelines"
             ]
           },
           {
             "group": "Growth Playbook",
             "pages": [
-              "mini-apps/overview",
+              "mini-apps/introduction/overview",
               "mini-apps/growth/optimize-onboarding",
               "mini-apps/growth/build-viral-mini-apps",
-              "mini-apps/growth/data-driven-growth",
               "mini-apps/growth/rewards"
             ]
           },
@@ -479,41 +481,36 @@
             "group": "Troubleshooting",
             "pages": [
               "mini-apps/troubleshooting/common-issues",
-              "mini-apps/troubleshooting/base-app-compatibility"
-            ]
-          },
-          {
-            "group": "Technical Reference",
-            "pages": [
-              {
-                "group": "MiniKit",
-                "pages": [
-                  "mini-apps/technical-reference/minikit/overview",
-                  "mini-apps/technical-reference/minikit/provider-and-initialization",
-                  {
-                    "group": "Hooks",
-                    "pages": [
-                      "mini-apps/technical-reference/minikit/hooks/useMiniKit",
-                      "mini-apps/technical-reference/minikit/hooks/useOpenUrl",
-                      "mini-apps/technical-reference/minikit/hooks/useClose",
-                      "mini-apps/technical-reference/minikit/hooks/usePrimaryButton",
-                      "mini-apps/technical-reference/minikit/hooks/useViewProfile",
-                      "mini-apps/technical-reference/minikit/hooks/useComposeCast",
-                      "mini-apps/technical-reference/minikit/hooks/useViewCast",
-                      "mini-apps/technical-reference/minikit/hooks/useAuthenticate",
-                      "mini-apps/technical-reference/minikit/hooks/useAddFrame",
-                      "mini-apps/technical-reference/minikit/hooks/useNotification"
-                    ]
-                  }
-                ]
-              }
+              "mini-apps/troubleshooting/base-app-compatibility",
+              "mini-apps/troubleshooting/how-search-works",
+              "mini-apps/troubleshooting/testing"
             ]
           },
           {
             "group": "Resources",
             "pages": [
               "mini-apps/resources/templates",
+              "mini-apps/resources/design-resources",
               "mini-apps/llms-full.txt"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "AI Agents",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": ["ai-agents/introduction/index"]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "ai-agents/core-concepts/wallets",
+              "ai-agents/core-concepts/identity-verification-auth",
+              "ai-agents/core-concepts/payments-and-transactions",
+              "ai-agents/core-concepts/agent-apps",
+              "ai-agents/core-concepts/agent-frameworks"
             ]
           }
         ]
@@ -545,10 +542,6 @@
                 "group": "Components",
                 "pages": [
                   {
-                    "group": "Appchain",
-                    "pages": ["onchainkit/latest/components/appchain/bridge"]
-                  },
-                  {
                     "group": "Buy",
                     "pages": ["onchainkit/latest/components/buy/buy"]
                   },
@@ -562,7 +555,10 @@
                   },
                   {
                     "group": "Fund",
-                    "pages": ["onchainkit/latest/components/fund/fund-button", "onchainkit/latest/components/fund/fund-card"]
+                    "pages": [
+                      "onchainkit/latest/components/fund/fund-button",
+                      "onchainkit/latest/components/fund/fund-card"
+                    ]
                   },
                   {
                     "group": "Identity",
@@ -578,15 +574,45 @@
                   },
                   {
                     "group": "Mint",
-                    "pages": ["onchainkit/latest/components/mint/nft-card", "onchainkit/latest/components/mint/nft-mint-card"]
+                    "pages": [
+                      "onchainkit/latest/components/mint/nft-card",
+                      "onchainkit/latest/components/mint/nft-mint-card"
+                    ]
+                  },
+                  {
+                    "group": "MiniKit",
+                    "pages": [
+                      "onchainkit/latest/components/minikit/overview",
+                      "onchainkit/latest/components/minikit/provider-and-initialization",
+                      {
+                        "group": "Hooks",
+                        "pages": [
+                          "onchainkit/latest/components/minikit/hooks/useMiniKit",
+                          "onchainkit/latest/components/minikit/hooks/useOpenUrl",
+                          "onchainkit/latest/components/minikit/hooks/useClose",
+                          "onchainkit/latest/components/minikit/hooks/usePrimaryButton",
+                          "onchainkit/latest/components/minikit/hooks/useViewProfile",
+                          "onchainkit/latest/components/minikit/hooks/useComposeCast",
+                          "onchainkit/latest/components/minikit/hooks/useViewCast",
+                          "onchainkit/latest/components/minikit/hooks/useAuthenticate",
+                          "onchainkit/latest/components/minikit/hooks/useAddFrame",
+                          "onchainkit/latest/components/minikit/hooks/useNotification"
+                        ]
+                      }
+                    ]
                   },
                   {
                     "group": "Signature",
-                    "pages": ["onchainkit/latest/components/signature/signature"]
+                    "pages": [
+                      "onchainkit/latest/components/signature/signature"
+                    ]
                   },
                   {
                     "group": "Swap",
-                    "pages": ["onchainkit/latest/components/swap/swap", "onchainkit/latest/components/swap/swap-settings"]
+                    "pages": [
+                      "onchainkit/latest/components/swap/swap",
+                      "onchainkit/latest/components/swap/swap-settings"
+                    ]
                   },
                   {
                     "group": "Token",
@@ -600,7 +626,9 @@
                   },
                   {
                     "group": "Transaction",
-                    "pages": ["onchainkit/latest/components/transaction/transaction"]
+                    "pages": [
+                      "onchainkit/latest/components/transaction/transaction"
+                    ]
                   },
                   {
                     "group": "Wallet",
@@ -616,14 +644,8 @@
                   },
                   {
                     "group": "Connected",
-                    "pages": ["onchainkit/latest/components/connected/connected"]
-                  },
-                  {
-                    "group": "MiniKit",
                     "pages": [
-                      "onchainkit/latest/components/minikit/autoconnect",
-                      "onchainkit/latest/components/minikit/if-in-miniapp",
-                      "onchainkit/latest/components/minikit/safe-area"
+                      "onchainkit/latest/components/connected/connected"
                     ]
                   }
                 ]
@@ -748,8 +770,7 @@
                   "onchainkit/guides/themes",
                   "onchainkit/guides/use-basename-in-onchain-app",
                   "onchainkit/guides/using-ai-powered-ides",
-                  "onchainkit/guides/ai-prompting-guide",
-                  "onchainkit/guides/testing-with-onchaintestkit"
+                  "onchainkit/guides/ai-prompting-guide"
                 ]
               },
               {
@@ -763,10 +784,6 @@
               {
                 "group": "Components",
                 "pages": [
-                  {
-                    "group": "Appchain",
-                    "pages": ["onchainkit/appchain/bridge"]
-                  },
                   {
                     "group": "Buy",
                     "pages": ["onchainkit/buy/buy"]
@@ -937,7 +954,6 @@
                 "group": "Types",
                 "pages": [
                   "onchainkit/api/types",
-                  "onchainkit/appchain/types",
                   "onchainkit/checkout/types",
                   "onchainkit/config/types",
                   "onchainkit/earn/types",
@@ -992,7 +1008,6 @@
               "cookbook/spend-permissions-ai-agent",
               "cookbook/launch-ai-agents",
               "cookbook/launch-tokens",
-              "cookbook/deploy-a-chain",
               "cookbook/onchain-social",
               "cookbook/defi-your-app",
               "cookbook/go-gasless",
@@ -1448,22 +1463,21 @@
   "navbar": {
     "links": [
       {
-        "label": "Blog",
-        "href": "https://blog.base.dev/"
-      },
-      {
         "label": "GitHub",
-        "href": "https://github.com/base"
+        "href": "https://github.com/base",
+        "icon": "github"
       },
       {
         "label": "Support",
-        "href": "https://discord.com/invite/buildonbase"
-      },
-      {
-        "label": "Base.org",
-        "href": "https://base.org"
+        "href": "https://discord.com/invite/buildonbase",
+        "icon": "discord"
       }
-    ]
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Base Build",
+      "href": "https://base.dev"
+    }
   },
   "footer": {
     "socials": {
@@ -1479,6 +1493,10 @@
           {
             "label": "Base.org",
             "href": "https://base.org"
+          },
+          {
+            "label": "Blog",
+            "href": "https://blog.base.dev/"
           },
           {
             "label": "Privacy Policy",
@@ -1497,6 +1515,134 @@
     ]
   },
   "redirects": [
+    {
+      "source": "/base-chain/builder-codes/builder-codes-faq",
+      "destination": "/base-chain/builder-codes/builder-codes"
+    },
+    {
+      "source": "/base-chain/quickstart/builder-codes",
+      "destination": "/base-chain/builder-codes/builder-codes"
+    },
+    {
+      "source": "/base-chain/builder-codes/builder-codes-app-developers",
+      "destination": "/base-chain/builder-codes/app-developers"
+    },
+    {
+      "source": "/base-chain/builder-codes/builder-codes-wallet-developers",
+      "destination": "/base-chain/builder-codes/wallet-developers"
+    },
+    {
+      "source": "/base-chain/builder-codes/builder-codes-bridge-developers",
+      "destination": "/base-chain/builder-codes/bridge-developers"
+    },
+    {
+      "source": "/get-started/ai-prompting",
+      "destination": "/get-started/docs-mcp"
+    },
+    {
+      "source": "/base-chain/network-information/bridges-mainnet",
+      "destination": "/base-chain/network-information/bridges"
+    },
+    {
+      "source": "/base-app/introduction/beta-faq",
+      "destination": "https://help.coinbase.com/en/base"
+    },
+    {
+      "source": "/base-app/agents/chat-agents",
+      "destination": "/mini-apps/technical-guides/building-chat-agents"
+    },
+    {
+      "source": "/base-app/agents/getting-started",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#getting-started"
+    },
+    {
+      "source": "/base-app/agents/building-quality-agents",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#best-practices"
+    },
+    {
+      "source": "/base-app/agents/getting-featured",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#best-practices"
+    },
+    {
+      "source": "/base-app/agents/quick-actions",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#quick-actions"
+    },
+    {
+      "source": "/base-app/agents/transaction-trays",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#transaction-trays"
+    },
+    {
+      "source": "/base-app/agents/deeplinks",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#deeplinks"
+    },
+    {
+      "source": "/base-app/agents/x402-agents",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#payment-agents-x402"
+    },
+    {
+      "source": "/base-app/agents/mini-apps-and-agents",
+      "destination": "/mini-apps/technical-guides/building-chat-agents#mini-app-integration"
+    },
+    {
+      "source": "/mini-apps/technical-guides/search-discovery",
+      "destination": "/mini-apps/troubleshooting/how-search-works"
+    },
+    {
+      "source": "/mini-apps/overview",
+      "destination": "/mini-apps/quickstart/create-new-miniapp"
+    },
+    {
+      "source": "/mini-apps/features/wallet",
+      "destination": "/mini-apps/core-concepts/base-account"
+    },
+    {
+      "source": "/mini-apps/growth/data-driven-growth",
+      "destination": "/mini-apps/technical-guides/data-driven-growth"
+    },
+    {
+      "source": "/mini-apps/technical-guides/data-driven-growth",
+      "destination": "https://base.dev"
+    },
+    {
+      "source": "/mini-apps/features/links",
+      "destination": "/mini-apps/technical-guides/links"
+    },
+    {
+      "source": "/mini-apps/technical-guides/links",
+      "destination": "/mini-apps/core-concepts/navigation"
+    },
+    {
+      "source": "/mini-apps/features/search-and-discovery",
+      "destination": "/mini-apps/troubleshooting/how-search-works"
+    },
+    {
+      "source": "/mini-apps/features/sharing-and-social-graph",
+      "destination": "/mini-apps/technical-guides/sharing-and-social-graph"
+    },
+    {
+      "source": "/mini-apps/features/sign-manifest",
+      "destination": "/mini-apps/technical-guides/sign-manifest"
+    },
+    {
+      "source": "/mini-apps/features/manifest",
+      "destination": "/mini-apps/core-concepts/manifest"
+    },
+    {
+      "source": "/mini-apps/features/authentication",
+      "destination": "/mini-apps/core-concepts/authentication"
+    },
+    {
+      "source": "/mini-apps/features/context",
+      "destination": "/mini-apps/core-concepts/context"
+    },
+    {
+      "source": "/mini-apps/features/notifications",
+      "destination": "/mini-apps/core-concepts/notifications"
+    },
+    {
+      "source": "/mini-apps/features/embeds-and-previews",
+      "destination": "/mini-apps/core-concepts/embeds-and-previews"
+    },
     {
       "source": "/privacy-policy-2025",
       "destination": "/privacy-policy"
@@ -1540,10 +1686,6 @@
     {
       "source": "/builderkits/onchainkit/:slug*",
       "destination": "/onchainkit/:slug*"
-    },
-    {
-      "source": "/builderkits/onchainkit/appchain/bridge",
-      "destination": "/onchainkit/appchain/bridge"
     },
     {
       "source": "/builderkits/onchainkit/buy/buy",
@@ -2599,11 +2741,11 @@
     },
     {
       "source": "/base-app/miniapps/overview",
-      "destination": "/mini-apps/technical-reference/minikit/overview"
+      "destination": "/onchainkit/latest/components/minikit/overview"
     },
     {
       "source": "/base-app/build-with-minikit/overview",
-      "destination": "/mini-apps/technical-reference/minikit/overview"
+      "destination": "/onchainkit/latest/components/minikit/overview"
     },
     {
       "source": "/base-app/miniapps/existing-app-integration",
@@ -2639,19 +2781,19 @@
     },
     {
       "source": "/base-app/miniapps/search-and-discovery",
-      "destination": "/mini-apps/features/search-and-discovery"
+      "destination": "/mini-apps/troubleshooting/how-search-works"
     },
     {
       "source": "/base-app/build-with-minikit/search-and-discovery",
-      "destination": "/mini-apps/features/search-and-discovery"
+      "destination": "/mini-apps/troubleshooting/how-search-works"
     },
     {
       "source": "/base-app/miniapps/sharing-your-miniapp",
-      "destination": "/mini-apps/features/sharing-and-social-graph"
+      "destination": "/mini-apps/technical-guides/sharing-and-social-graph"
     },
     {
       "source": "/base-app/build-with-minikit/sharing-your-miniapp",
-      "destination": "/mini-apps/features/sharing-and-social-graph"
+      "destination": "/mini-apps/technical-guides/sharing-and-social-graph"
     },
     {
       "source": "/base-app/miniapps/how-manifest-work",
@@ -2679,11 +2821,15 @@
     },
     {
       "source": "/mini-apps/design-ux/best-practices",
-      "destination": "/mini-apps/design-ux/onchain-ux"
+      "destination": "/mini-apps/featured-guidelines/design-guidelines"
+    },
+    {
+      "source": "/mini-apps/design-ux/design-patterns",
+      "destination": "/mini-apps/featured-guidelines/design-guidelines"
     },
     {
       "source": "/mini-apps/design-ux/onchainkit",
-      "destination": "/mini-apps/design-ux/components"
+      "destination": "/mini-apps/featured-guidelines/design-guidelines"
     },
     {
       "source": "/mini-apps/quickstart/new-apps/features",
@@ -2700,6 +2846,66 @@
     {
       "source": "/mini-apps/quickstart/new-apps/create-manifest",
       "destination": "/mini-apps/quickstart/create-new-miniapp"
+    },
+    {
+      "source": "/mini-apps/design-ux/:slug*",
+      "destination": "/mini-apps/featured-guidelines/design-guidelines"
+    },
+    {
+      "source": "/mini-apps/get-featured/requirements",
+      "destination": "/mini-apps/featured-guidelines/overview"
+    },
+    {
+      "source": "/mini-apps/quickstart/launch-checklist",
+      "destination": "/mini-apps/quickstart/build-checklist"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/overview",
+      "destination": "/onchainkit/latest/components/minikit/overview"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/provider-and-initialization",
+      "destination": "/onchainkit/latest/components/minikit/provider-and-initialization"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useMiniKit",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useMiniKit"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useOpenUrl",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useOpenUrl"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useClose",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useClose"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/usePrimaryButton",
+      "destination": "/onchainkit/latest/components/minikit/hooks/usePrimaryButton"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useViewProfile",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useViewProfile"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useComposeCast",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useComposeCast"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useViewCast",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useViewCast"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useAuthenticate",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useAuthenticate"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useAddFrame",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useAddFrame"
+    },
+    {
+      "source": "/mini-apps/technical-reference/minikit/hooks/useNotification",
+      "destination": "/onchainkit/latest/components/minikit/hooks/useNotification"
     }
   ],
   "integrations": {
