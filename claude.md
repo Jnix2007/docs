@@ -9,6 +9,7 @@ Technical documentation for Base (Ethereum L2). Built with Mintlify.
 | `mintlify dev` | Local dev server |
 | `/lint` | Lint MDX files and fix issues |
 | `/doc-feedback` | Review content quality |
+| `/agents` | Generate AGENTS.md index for AI agents |
 
 ## Structure
 
@@ -17,11 +18,9 @@ docs/
 ├── get-started/      # Intro, quickstarts
 ├── base-chain/       # Network, nodes, tools
 ├── base-account/     # Smart Wallet SDK
-├── base-app/         # Agent development
+├── ai-agents/        # Agent development
 ├── mini-apps/        # MiniKit guides
 ├── onchainkit/       # React components (versioned)
-├── cookbook/         # Tutorials
-├── learn/            # Solidity, Ethereum basics
 ├── images/           # Assets by topic
 ├── snippets/         # Reusable MDX components
 └── docs.json         # Navigation config
@@ -60,5 +59,6 @@ Edit `docs.json` to add/remove pages. Add redirects when removing pages.
 ## Before Committing
 
 1. Run `/lint` and fix errors
-2. Add redirects for removed pages
-3. Verify links work
+2. Run `/agents` if docs structure changed
+3. Add redirects for removed pages
+4. Verify links work
